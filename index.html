@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Agro<span>Sustentável</span></h1>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#calculadora">Simulador</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="btn-theme" aria-label="Alternar modo escuro">
+                <span class="icon">🌙</span> Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2>Agro forte, futuro sustentável</h2>
+                <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente. Descubra como a tecnologia e a consciência estão moldando o amanhã.</p>
+                <a href="#pilares" class="btn-primary">Conhecer Práticas</a>
+            </div>
+        </section>
+
+        <section id="pilares" class="pilares-section">
+            <div class="section-title">
+                <h3>Nossos Pilares de Equilíbrio</h3>
+                <p>Produzir mais, impactando menos. Conheça as tecnologias aplicadas.</p>
+            </div>
+            
+            <div class="cards-container">
+                <article class="card">
+                    <div class="card-image-placeholder img-tech"></div>
+                    <div class="card-body">
+                        <h4>Agricultura de Precisão</h4>
+                        <p>Uso de drones, sensores e IA para aplicar insumos no local correto e na quantidade exata, reduzindo o desperdício.</p>
+                        <button class="btn-card" data-info="A agricultura de precisão pode reduzir o uso de defensivos em até 30%, otimizando os recursos hídricos e do solo.">Saber Mais</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-placeholder img-carbon"></div>
+                    <div class="card-body">
+                        <h4>Carbono Neutro</h4>
+                        <p>Práticas de plantio direto e integração lavoura-pecuária-floresta (ILPF) que sequestram mais carbono do que emitem.</p>
+                        <button class="btn-card" data-info="Sistemas integrados (ILPF) conseguem recuperar pastagens degradadas e neutralizar as emissões de gases estufa do rebanho.">Saber Mais</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-placeholder img-water"></div>
+                    <div class="card-body">
+                        <h4>Manejo Hídrico</h4>
+                        <p>Sistemas inteligentes de irrigação por gotejamento e reúso de água da chuva que protegem nossos aquíferos.</p>
+                        <button class="btn-card" data-info="A irrigação automatizada analisa a umidade do solo em tempo real, evitando o bombeamento desnecessário de água.">Saber Mais</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="dynamic-info-box" class="info-box hidden">
+                <p id="info-box-text"></p>
+                <button id="close-info-btn">&times;</button>
+            </div>
+        </section>
+
+        <section id="calculadora" class="simulador-section">
+            <div class="simulador-container">
+                <h3>Simulador de Impacto Sustentável</h3>
+                <p>Selecione uma prática sustentável para ver a estimativa de redução de impacto ambiental em sua propriedade simulada.</p>
+                
+                <div class="simulador-controls">
+                    <select id="pratica-select">
+                        <option value="">-- Selecione uma prática --</option>
+                        <option value="solar">Energia Fotovoltaica na Fazenda</option>
+                        <option value="direto">Plantio Direto na Palha</option>
+                        <option value="reuso">Captação de Água da Chuva</option>
+                    </select>
+                </div>
+                <div id="simulador-result" class="simulador-result">
+                    <p>Selecione uma opção acima para calcular o impacto teórico.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="contact-container">
+                <h3>Una-se ao Movimento GreenAgro</h3>
+                <p>Receba newsletters técnicas sobre soluções sustentáveis para o campo.</p>
+                
+                <form id="agro-contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="username">Nome Completo</label>
+                        <input type="text" id="username" placeholder="Digite seu nome">
+                        <span class="error-message" id="error-name">O nome deve ter pelo menos 3 caracteres.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="useremail">E-mail Corporativo/Pessoal</label>
+                        <input type="email" id="useremail" placeholder="seuemail@agro.com">
+                        <span class="error-message" id="error-email">Insira um e-mail válido.</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Inscrição</button>
+                </form>
+                <div id="form-success" class="success-message hidden">
+                    🎉 Inscrição realizada com sucesso! Em breve você receberá nossos materiais.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 AgroSustentável. Todos os direitos reservados.</p>
+        <p>Desenvolvido focado no equilíbrio entre produção e meio ambiente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
